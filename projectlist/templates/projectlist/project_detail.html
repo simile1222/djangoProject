@@ -1,0 +1,17 @@
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+
+
+ 
+<form method="post">
+  {% csrf_token %}
+  <label for="score">별점 평가 (1~5점)</label>
+  <select name="score" id="score">
+    {% for i in "12345" %}
+      <option value="{{ i }}">{{ i }}점</option>
+    {% endfor %}
+  </select>
+  <button type="submit">제출</button>
+</form>
+
+<a href="{% url 'projectlist:project_list' %}">← 목록으로</a>

@@ -1,0 +1,10 @@
+<h1>프로젝트 목록</h1>
+<ul>
+  {% for project in projects %}
+    <li>
+      <a href="{% url 'projectlist:project_detail' project.id %}">{{ project.name }}</a>
+    </li>
+  {% empty %}
+    <li>등록된 프로젝트가 없습니다.</li>
+  {% endfor %}
+</ul>
