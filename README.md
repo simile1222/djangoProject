@@ -12,4 +12,6 @@ docker-compose up --build
 ```
 ### 브라우저 확인
 -http://localhost:8000/projects
+
+
 -http://localhost:8000/admin : 관리자 로그인 필요
